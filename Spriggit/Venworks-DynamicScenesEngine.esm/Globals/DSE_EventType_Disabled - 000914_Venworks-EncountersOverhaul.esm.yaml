@@ -1,0 +1,9 @@
+FormKey: 000914:Venworks-DynamicScenesEngine.esm
+MajorRecordFlagsRaw: 64
+EditorID: DSE_EventType_Disabled
+FormVersion: 582
+StarfieldMajorRecordFlags:
+- 0x40
+Data: -1
+MajorFlags:
+- Constant

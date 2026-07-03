@@ -1,0 +1,9 @@
+FormKey: 000919:Venworks-DynamicScenesEngine.esm
+MajorRecordFlagsRaw: 64
+EditorID: DSE_EventType_Clutter_Large
+FormVersion: 582
+StarfieldMajorRecordFlags:
+- 0x40
+Data: 3
+MajorFlags:
+- Constant

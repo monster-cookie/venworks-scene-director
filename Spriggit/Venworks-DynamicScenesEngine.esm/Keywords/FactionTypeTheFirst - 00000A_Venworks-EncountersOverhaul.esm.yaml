@@ -1,0 +1,9 @@
+FormKey: 00000A:Venworks-DynamicScenesEngine.esm
+EditorID: FactionTypeTheFirst
+FormVersion: 582
+Color: '#00FFFFFF'
+Type: Faction
+FNAM: 0x00000000
+Name:
+  TargetLanguage: English
+  Value: The First

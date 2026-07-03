@@ -1,0 +1,17 @@
+FormKey: 0008B6:Venworks-DynamicScenesEngine.esm
+MajorRecordFlagsRaw: 8388608
+EditorID: DSE_Marker_Clutter_Outdoor_T5
+FormVersion: 582
+StarfieldMajorRecordFlags:
+- 0x800000
+Components:
+- MutagenObjectType: KeywordFormComponent
+ForcedLocations:
+- 0008AD:Venworks-DynamicScenesEngine.esm
+Model:
+  File: Markers\PackInMarkers\PIMarkerXLarge01.nif
+  LightLayer: 1
+MaxAngle: 1
+UnknownDNAMFloat: 1
+DNAMDataTypeState:
+- Break0

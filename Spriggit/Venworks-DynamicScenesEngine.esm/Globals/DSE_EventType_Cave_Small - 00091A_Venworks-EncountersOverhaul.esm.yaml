@@ -1,0 +1,9 @@
+FormKey: 00091A:Venworks-DynamicScenesEngine.esm
+MajorRecordFlagsRaw: 64
+EditorID: DSE_EventType_Cave_Small
+FormVersion: 582
+StarfieldMajorRecordFlags:
+- 0x40
+Data: 4
+MajorFlags:
+- Constant

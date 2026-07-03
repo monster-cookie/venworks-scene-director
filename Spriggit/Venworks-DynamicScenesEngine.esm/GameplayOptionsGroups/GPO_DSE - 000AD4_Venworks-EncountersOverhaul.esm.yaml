@@ -1,0 +1,10 @@
+FormKey: 000AD4:Venworks-DynamicScenesEngine.esm
+EditorID: GPO_DSE
+FormVersion: 582
+Name:
+  TargetLanguage: English
+  Value: Venworks Dynamic Scenes Engine Options
+Options:
+  MutagenObjectType: GameplayOptionsGroupLeaf
+  GameplayOptions:
+  - 00098F:Venworks-DynamicScenesEngine.esm
