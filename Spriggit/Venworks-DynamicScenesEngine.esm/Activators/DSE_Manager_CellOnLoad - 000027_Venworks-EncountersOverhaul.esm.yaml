@@ -9,37 +9,37 @@ VirtualMachineAdapter:
   - Name: Venworks:DynamicScenesEngine:Managers:DSEManager_OnCellLoad
     Properties:
     - MutagenObjectType: ScriptObjectProperty
-      Name: DSELinkedRef_Marker_Center
+      Name: DSE_LinkedRef_Marker_Center
       Object: 000F8D:Venworks-DynamicScenesEngine.esm
     - MutagenObjectType: ScriptObjectProperty
-      Name: DSELinkedRef_Marker_Map
+      Name: DSE_LinkedRef_Marker_Map
       Object: 000F8C:Venworks-DynamicScenesEngine.esm
     - MutagenObjectType: ScriptObjectProperty
-      Name: DSELinkedRef_Marker_SceneA_Bosses
+      Name: DSE_LinkedRef_Marker_SceneA_Bosses
       Object: 00000E:Venworks-DynamicScenesEngine.esm
     - MutagenObjectType: ScriptObjectProperty
-      Name: DSELinkedRef_Marker_SceneA_Chests
+      Name: DSE_LinkedRef_Marker_SceneA_Chests
       Object: 000006:Venworks-DynamicScenesEngine.esm
     - MutagenObjectType: ScriptObjectProperty
-      Name: DSELinkedRef_Marker_SceneA_Minions
+      Name: DSE_LinkedRef_Marker_SceneA_Minions
       Object: 00000F:Venworks-DynamicScenesEngine.esm
     - MutagenObjectType: ScriptObjectProperty
-      Name: DSELinkedRef_Marker_SceneB_Bosses
+      Name: DSE_LinkedRef_Marker_SceneB_Bosses
       Object: 00000C:Venworks-DynamicScenesEngine.esm
     - MutagenObjectType: ScriptObjectProperty
-      Name: DSELinkedRef_Marker_SceneB_Chests
+      Name: DSE_LinkedRef_Marker_SceneB_Chests
       Object: 00000B:Venworks-DynamicScenesEngine.esm
     - MutagenObjectType: ScriptObjectProperty
-      Name: DSELinkedRef_Marker_SceneB_Minions
+      Name: DSE_LinkedRef_Marker_SceneB_Minions
       Object: 00000D:Venworks-DynamicScenesEngine.esm
     - MutagenObjectType: ScriptObjectProperty
-      Name: DSELinkedRef_Marker_SceneC_Bosses
+      Name: DSE_LinkedRef_Marker_SceneC_Bosses
       Object: 000012:Venworks-DynamicScenesEngine.esm
     - MutagenObjectType: ScriptObjectProperty
-      Name: DSELinkedRef_Marker_SceneC_Chests
+      Name: DSE_LinkedRef_Marker_SceneC_Chests
       Object: 000010:Venworks-DynamicScenesEngine.esm
     - MutagenObjectType: ScriptObjectProperty
-      Name: DSELinkedRef_Marker_SceneC_Minions
+      Name: DSE_LinkedRef_Marker_SceneC_Minions
       Object: 000011:Venworks-DynamicScenesEngine.esm
     - MutagenObjectType: ScriptObjectProperty
       Name: GlobalChanceToSpawn
