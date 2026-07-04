@@ -38,20 +38,20 @@ Group SceneMangerConfiguration
 EndGroup
 
 Group AutoFillLinkedRefKeywords
-  Keyword Property DSELinkedRef_Marker_Map Auto Const Mandatory
-  Keyword Property DSELinkedRef_Marker_Center Auto Const Mandatory
+  Keyword Property DSE_LinkedRef_Marker_Map Auto Const Mandatory
+  Keyword Property DSE_LinkedRef_Marker_Center Auto Const Mandatory
 
-  Keyword Property DSELinkedRef_Marker_SceneA_Minions Auto Const Mandatory
-  Keyword Property DSELinkedRef_Marker_SceneA_Bosses Auto Const Mandatory
-  Keyword Property DSELinkedRef_Marker_SceneA_Chests Auto Const Mandatory
+  Keyword Property DSE_LinkedRef_Marker_SceneA_Minions Auto Const Mandatory
+  Keyword Property DSE_LinkedRef_Marker_SceneA_Bosses Auto Const Mandatory
+  Keyword Property DSE_LinkedRef_Marker_SceneA_Chests Auto Const Mandatory
 
-  Keyword Property DSELinkedRef_Marker_SceneB_Minions Auto Const Mandatory
-  Keyword Property DSELinkedRef_Marker_SceneB_Bosses Auto Const Mandatory
-  Keyword Property DSELinkedRef_Marker_SceneB_Chests Auto Const Mandatory
+  Keyword Property DSE_LinkedRef_Marker_SceneB_Minions Auto Const Mandatory
+  Keyword Property DSE_LinkedRef_Marker_SceneB_Bosses Auto Const Mandatory
+  Keyword Property DSE_LinkedRef_Marker_SceneB_Chests Auto Const Mandatory
 
-  Keyword Property DSELinkedRef_Marker_SceneC_Minions Auto Const Mandatory
-  Keyword Property DSELinkedRef_Marker_SceneC_Bosses Auto Const Mandatory
-  Keyword Property DSELinkedRef_Marker_SceneC_Chests Auto Const Mandatory
+  Keyword Property DSE_LinkedRef_Marker_SceneC_Minions Auto Const Mandatory
+  Keyword Property DSE_LinkedRef_Marker_SceneC_Bosses Auto Const Mandatory
+  Keyword Property DSE_LinkedRef_Marker_SceneC_Chests Auto Const Mandatory
 EndGroup
 
 Group Autofill
