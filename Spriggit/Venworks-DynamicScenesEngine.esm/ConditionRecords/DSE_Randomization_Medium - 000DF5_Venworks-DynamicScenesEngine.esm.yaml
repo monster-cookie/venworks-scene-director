@@ -1,0 +1,28 @@
+FormKey: 000DF5:Venworks-DynamicScenesEngine.esm
+EditorID: DSE_Randomization_Medium
+FormVersion: 582
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Flags:
+  - OR
+  Unknown2: 81
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    FirstParameter: 000975:Venworks-DynamicScenesEngine.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Flags:
+  - OR
+  Unknown2: 81
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    FirstParameter: 000021:Venworks-Core.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionGlobal
+  CompareOperator: LessThanOrEqualTo
+  Flags:
+  - OR
+  Unknown2: 81
+  Data:
+    MutagenObjectType: GetRandomPercentConditionData
+  ComparisonValue: 00001F:Venworks-Core.esm

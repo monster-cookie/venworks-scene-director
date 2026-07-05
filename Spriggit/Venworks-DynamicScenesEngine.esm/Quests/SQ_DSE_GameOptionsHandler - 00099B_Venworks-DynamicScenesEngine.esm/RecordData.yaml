@@ -10,11 +10,11 @@ VirtualMachineAdapter:
       Structs:
       - Members:
         - MutagenObjectType: ScriptObjectProperty
-          Name: Option
-          Object: 00098F:Venworks-DynamicScenesEngine.esm
-        - MutagenObjectType: ScriptObjectProperty
           Name: ValueGlobal
           Object: 000975:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: Option
+          Object: 00098F:Venworks-DynamicScenesEngine.esm
     - MutagenObjectType: ScriptObjectProperty
       Name: PEO_GPO_EnvironmentalDamage
       Object: 00002C:sfbgs007.esm

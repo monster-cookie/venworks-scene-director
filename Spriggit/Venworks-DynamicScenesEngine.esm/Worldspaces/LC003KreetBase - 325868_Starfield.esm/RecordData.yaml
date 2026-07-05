@@ -1,0 +1,38 @@
+FormKey: 325868:Starfield.esm
+MajorRecordFlagsRaw: 4
+EditorID: LC003KreetBase
+FormVersion: 582
+Version2: 11
+StarfieldMajorRecordFlags:
+- NotPlayable
+Components:
+- MutagenObjectType: WorldSpaceOverlayComponent
+  SNAM: 0x07590100
+  PNAM: 0x0F000000
+  SurfaceBlock: 325878:Starfield.esm
+Name:
+  TargetLanguage: English
+  Value: Kreet
+Location: 028A08:Starfield.esm
+Biome: 2C9985:Starfield.esm
+Climate: 09EAA4:Starfield.esm
+LodWater: 000018:Starfield.esm
+LodWaterHeight: 0
+LandDefaults:
+  DefaultLandHeight: -2048
+  DefaultWaterHeight: -200
+MapData: {}
+WorldMapOffset:
+  WorldMapOffsetScale: 1
+DistantLodMultiplier: 1
+Flags:
+- SmallWorld
+FNAM: 0x00
+ObjectBoundsMin: -0.12207031, -0.07324219
+ObjectBoundsMax: 0.12207031, 0.12207031
+GNAM: 1
+CellWaterHeightLocations: []
+WaterHeights: []
+HNAM: 0x00
+MajorFlags:
+- 0x4

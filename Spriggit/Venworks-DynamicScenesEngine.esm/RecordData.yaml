@@ -15,4 +15,4 @@ ModHeader:
   - Master: sfbgs007.esm
   - Master: Venworks-Core.esm
   Branch: Main
-  InteriorCellCount: 0
+  InteriorCellCount: 1

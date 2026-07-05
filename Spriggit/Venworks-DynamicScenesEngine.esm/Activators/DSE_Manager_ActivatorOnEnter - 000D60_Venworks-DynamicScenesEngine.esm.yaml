@@ -1,12 +1,9 @@
-FormKey: 000027:Venworks-DynamicScenesEngine.esm
-MajorRecordFlagsRaw: 512
-EditorID: DSE_Manager_CellOnLoad
+FormKey: 000D60:Venworks-DynamicScenesEngine.esm
+EditorID: DSE_Manager_ActivatorOnEnter
 FormVersion: 582
-StarfieldMajorRecordFlags:
-- 0x200
 VirtualMachineAdapter:
   Scripts:
-  - Name: Venworks:DynamicScenesEngine:Managers:DSEManager_OnCellLoad
+  - Name: Venworks:DynamicScenesEngine:Managers:DSEManager_OnTriggerEnter
     Properties:
     - MutagenObjectType: ScriptObjectProperty
       Name: DSE_LinkedRef_Marker_Center
@@ -50,36 +47,24 @@ VirtualMachineAdapter:
       Name: SpawnGroupDefinitions
       Structs:
       - Members:
-        - MutagenObjectType: ScriptIntProperty
-          Name: BossesMinToSpawn
-          Data: 1
+        - MutagenObjectType: ScriptObjectProperty
+          Name: GroupFaction
+          Object: 000003:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: LinkRefKeywordForChestSpawnPoints
+          Object: 000006:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: LinkRefKeywordForMinionSpawnPoints
+          Object: 00000F:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
           Name: LinkRefKeywordForBossSpawnPoints
           Object: 00000E:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
           Name: MinionsChanceToSpawn
-          Object: 000DEE:Venworks-DynamicScenesEngine.esm
-        - MutagenObjectType: ScriptObjectProperty
-          Name: BossesChanceToSpawn
           Object: 000DF3:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
-          Name: LinkRefKeywordForMinionSpawnPoints
-          Object: 00000F:Venworks-DynamicScenesEngine.esm
-        - MutagenObjectType: ScriptObjectProperty
-          Name: LinkRefKeywordForChestSpawnPoints
-          Object: 000006:Venworks-DynamicScenesEngine.esm
-        - MutagenObjectType: ScriptIntProperty
-          Name: MinionsMinToSpawn
-          Data: 2
-        - MutagenObjectType: ScriptIntProperty
-          Name: BossesMaxToSpawn
-          Data: 1
-        - MutagenObjectType: ScriptIntProperty
-          Name: MinionsMaxToSpawn
-          Data: 4
-        - MutagenObjectType: ScriptObjectProperty
-          Name: GroupFaction
-          Object: 000003:Venworks-DynamicScenesEngine.esm
+          Name: BossesChanceToSpawn
+          Object: 000DF5:Venworks-DynamicScenesEngine.esm
     - MutagenObjectType: ScriptObjectProperty
       Name: SQ_DSE_FactionConfiguration
       Object: 0000CD:Venworks-DynamicScenesEngine.esm
@@ -91,13 +76,8 @@ VirtualMachineAdapter:
     - MutagenObjectType: ScriptIntProperty
       Name: Waves
       Data: 1
-ObjectBounds:
-  First: -1, -1, -1
-  Second: 1, 1, 1
 Model:
   LightLayer: 1
 MarkerColor: '#00CC4C33'
 Flags: []
 ActivationAngle: 360
-MajorFlags:
-- HiddenFromLocalMap
