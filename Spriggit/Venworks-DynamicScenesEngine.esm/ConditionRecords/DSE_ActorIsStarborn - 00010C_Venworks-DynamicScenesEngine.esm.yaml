@@ -1,10 +1,10 @@
-FormKey: 00010D:Venworks-DynamicScenesEngine.esm
-EditorID: DSE_ActorIsSiren
+FormKey: 00010C:Venworks-DynamicScenesEngine.esm
+EditorID: DSE_ActorIsStarborn
 FormVersion: 582
 Conditions:
 - MutagenObjectType: ConditionFloat
-  Unknown2: 35520
+  Unknown2: 669
   Data:
     MutagenObjectType: GetInFactionConditionData
-    FirstParameter: 078095:Starfield.esm
+    FirstParameter: 018EDE:Starfield.esm
   ComparisonValue: 1

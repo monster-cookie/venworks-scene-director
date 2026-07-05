@@ -13,14 +13,14 @@ VirtualMachineAdapter:
       Structs:
       - Members:
         - MutagenObjectType: ScriptObjectProperty
+          Name: ChestsBoss
+          Object: 0000FF:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
           Name: Bosses
           Object: 0000DB:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
           Name: Robots
           Object: 0000F4:Venworks-DynamicScenesEngine.esm
-        - MutagenObjectType: ScriptObjectProperty
-          Name: ChestsBoss
-          Object: 0000FF:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
           Name: FactionType
           Object: 0546E0:Starfield.esm
@@ -38,14 +38,14 @@ VirtualMachineAdapter:
           Object: 0000DF:Venworks-DynamicScenesEngine.esm
       - Members:
         - MutagenObjectType: ScriptObjectProperty
+          Name: ChestsBoss
+          Object: 0000FA:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
           Name: Any
           Object: 0000D7:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
           Name: Robots
           Object: 0000E7:Venworks-DynamicScenesEngine.esm
-        - MutagenObjectType: ScriptObjectProperty
-          Name: ChestsBoss
-          Object: 0000FA:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
           Name: DSE_ActorIsTest
           Object: 00010B:Venworks-DynamicScenesEngine.esm
@@ -66,20 +66,20 @@ VirtualMachineAdapter:
           Name: Minions
           Object: 0000D5:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
-          Name: FactionType
-          Object: 000002:Venworks-DynamicScenesEngine.esm
-        - MutagenObjectType: ScriptObjectProperty
           Name: Any
           Object: 0000DA:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: FactionType
+          Object: 000002:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
           Name: Bosses
           Object: 0000D6:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
-          Name: Robots
-          Object: 0000D3:Venworks-DynamicScenesEngine.esm
-        - MutagenObjectType: ScriptObjectProperty
           Name: DSE_ActorIsTest
           Object: 000107:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: Robots
+          Object: 0000D3:Venworks-DynamicScenesEngine.esm
       - Members:
         - MutagenObjectType: ScriptObjectProperty
           Name: ChestsLarge
@@ -94,8 +94,8 @@ VirtualMachineAdapter:
           Name: Any
           Object: 0000D4:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
-          Name: Bosses
-          Object: 0000DE:Venworks-DynamicScenesEngine.esm
+          Name: DSE_ActorIsTest
+          Object: 00010A:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
           Name: Minions
           Object: 0000DD:Venworks-DynamicScenesEngine.esm
@@ -103,8 +103,8 @@ VirtualMachineAdapter:
           Name: FactionType
           Object: 0546DE:Starfield.esm
         - MutagenObjectType: ScriptObjectProperty
-          Name: DSE_ActorIsTest
-          Object: 00010A:Venworks-DynamicScenesEngine.esm
+          Name: Bosses
+          Object: 0000DE:Venworks-DynamicScenesEngine.esm
       - Members:
         - MutagenObjectType: ScriptObjectProperty
           Name: ChestsLarge
@@ -119,8 +119,8 @@ VirtualMachineAdapter:
           Name: Any
           Object: 0000EE:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
-          Name: Bosses
-          Object: 0000E3:Venworks-DynamicScenesEngine.esm
+          Name: DSE_ActorIsTest
+          Object: 00010D:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
           Name: Minions
           Object: 0000E9:Venworks-DynamicScenesEngine.esm
@@ -128,8 +128,8 @@ VirtualMachineAdapter:
           Name: FactionType
           Object: 000001:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
-          Name: DSE_ActorIsTest
-          Object: 00010D:Venworks-DynamicScenesEngine.esm
+          Name: Bosses
+          Object: 0000E3:Venworks-DynamicScenesEngine.esm
       - Members:
         - MutagenObjectType: ScriptObjectProperty
           Name: ChestsLarge
@@ -144,8 +144,8 @@ VirtualMachineAdapter:
           Name: Any
           Object: 0000F6:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
-          Name: Bosses
-          Object: 0000E8:Venworks-DynamicScenesEngine.esm
+          Name: DSE_ActorIsTest
+          Object: 00010C:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
           Name: Minions
           Object: 0000F3:Venworks-DynamicScenesEngine.esm
@@ -153,8 +153,8 @@ VirtualMachineAdapter:
           Name: FactionType
           Object: 000009:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
-          Name: DSE_ActorIsTest
-          Object: 00010C:Venworks-DynamicScenesEngine.esm
+          Name: Bosses
+          Object: 0000E8:Venworks-DynamicScenesEngine.esm
       - Members:
         - MutagenObjectType: ScriptObjectProperty
           Name: ChestsLarge
@@ -169,8 +169,8 @@ VirtualMachineAdapter:
           Name: Any
           Object: 0000D8:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
-          Name: Bosses
-          Object: 0000E2:Venworks-DynamicScenesEngine.esm
+          Name: DSE_ActorIsTest
+          Object: 000105:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
           Name: Minions
           Object: 0000E0:Venworks-DynamicScenesEngine.esm
@@ -178,8 +178,8 @@ VirtualMachineAdapter:
           Name: FactionType
           Object: 000004:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
-          Name: DSE_ActorIsTest
-          Object: 000105:Venworks-DynamicScenesEngine.esm
+          Name: Bosses
+          Object: 0000E2:Venworks-DynamicScenesEngine.esm
       - Members:
         - MutagenObjectType: ScriptObjectProperty
           Name: ChestsLarge
@@ -194,8 +194,8 @@ VirtualMachineAdapter:
           Name: Any
           Object: 0000CE:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
-          Name: Bosses
-          Object: 0000E5:Venworks-DynamicScenesEngine.esm
+          Name: DSE_ActorIsTest
+          Object: 000108:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
           Name: Minions
           Object: 0000F7:Venworks-DynamicScenesEngine.esm
@@ -203,15 +203,15 @@ VirtualMachineAdapter:
           Name: FactionType
           Object: 000005:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
-          Name: DSE_ActorIsTest
-          Object: 000108:Venworks-DynamicScenesEngine.esm
+          Name: Bosses
+          Object: 0000E5:Venworks-DynamicScenesEngine.esm
       - Members:
-        - MutagenObjectType: ScriptObjectProperty
-          Name: Robots
-          Object: 0008D1:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
           Name: Minions
           Object: 0008D0:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: Robots
+          Object: 0008D1:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
           Name: FactionType
           Object: 0008C6:Venworks-DynamicScenesEngine.esm
@@ -222,11 +222,11 @@ VirtualMachineAdapter:
           Name: ChestsBoss
           Object: 0008CE:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
-          Name: Bosses
-          Object: 0008CB:Venworks-DynamicScenesEngine.esm
-        - MutagenObjectType: ScriptObjectProperty
           Name: ChestsLarge
           Object: 0008CF:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: Bosses
+          Object: 0008CB:Venworks-DynamicScenesEngine.esm
     - MutagenObjectType: ScriptObjectProperty
       Name: FactionTypeCrimsonFleet
       Object: 0546E0:Starfield.esm

@@ -6,7 +6,7 @@ Name:
   Value: Debug Mode
 Description:
   TargetLanguage: English
-  Value: >+
+  Value: >
     Enabled debug mode for Venworks Dynamic Scenes Engine. Debug mode turns on some markers to help you find modified encounters and enables more detailed logs.
 
 
@@ -27,13 +27,13 @@ Rewards:
   SettingValue: 0
   Name:
     TargetLanguage: English
-    Value: Disabled
+    Value: Disable
   RewardValue: 0
 - Description:
     TargetLanguage: English
-    Value: '{0}: Enabled debug mode'
+    Value: '{0}: Enables debug mode'
   SettingValue: 1
   Name:
     TargetLanguage: English
-    Value: Enabled
+    Value: Enable
   RewardValue: 0

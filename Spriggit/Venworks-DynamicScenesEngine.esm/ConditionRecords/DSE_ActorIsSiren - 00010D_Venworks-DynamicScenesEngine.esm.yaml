@@ -1,10 +1,10 @@
-FormKey: 000109:Venworks-DynamicScenesEngine.esm
-EditorID: DSE_ActorIsCrimsonFleet
+FormKey: 00010D:Venworks-DynamicScenesEngine.esm
+EditorID: DSE_ActorIsSiren
 FormVersion: 582
 Conditions:
 - MutagenObjectType: ConditionFloat
-  Unknown2: 35520
+  Unknown2: 669
   Data:
     MutagenObjectType: GetInFactionConditionData
-    FirstParameter: 010B30:Starfield.esm
+    FirstParameter: 078095:Starfield.esm
   ComparisonValue: 1

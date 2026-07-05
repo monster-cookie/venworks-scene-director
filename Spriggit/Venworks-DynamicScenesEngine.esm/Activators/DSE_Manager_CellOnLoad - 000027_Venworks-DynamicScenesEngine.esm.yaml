@@ -43,7 +43,7 @@ VirtualMachineAdapter:
       Object: 000011:Venworks-DynamicScenesEngine.esm
     - MutagenObjectType: ScriptObjectProperty
       Name: GlobalChanceToSpawn
-      Object: 00097E:Venworks-DynamicScenesEngine.esm
+      Object: 00004A:Venworks-Core.esm
     - MutagenObjectType: ScriptIntProperty
       Name: Mode
     - MutagenObjectType: ScriptStructListProperty
