@@ -6,11 +6,13 @@ The following activators and statics must present in the scene/packin/poi or DSE
 
 ### Scene Manager
 
-Obsoletely necessary, a container, door, activator, book with the matching DSEManager script on it and setup. All markers must be linked to this manager for NPC and Clutter spawning to function at game time.
+A scene manager is necessary (a container, door, activator, or book) with the matching DSEManager script on it and setup. All markers must be linked to this manager for NPC and Clutter spawning to function at game time.
 
 ### Scene Group Markers
 
-You must have 1 at least one scene group but you can currently define as many as you want. The must be linked ref'ed to the manager using the correct keyword.
+You must have 1 at least one scene group but you can currently define as many as you want. They must be linked ref'ed to the manager using the correct LinkedRef Keyword.
+
+HINT: Use the ref window batch editor in the View menu to link everything. You can select a group of references in the cell then use the LinkedRef mode of the editor to link them all to the manager in 1 shot. Majorly speeds up work.
 
 #### Boss Marker(s)
 
