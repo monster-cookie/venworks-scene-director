@@ -1,41 +1,47 @@
 # Dynamic Scenes Engine: Location Subtypes
 
-The story manage script event can take 2 integer values further parsing the results.
+Location subtypes are integer global values sent to Story Manager as `Int1`. They are meant to describe the theme or layout family of the trigger location.
+
+Do not use location subtypes as a replacement for the encounter type keyword. The encounter type says what broad kind of content is being requested; the location subtype says what flavor of location it is.
 
 ## Story Manager Data Packet
 
-Story Manager Data will be:
+`DSETriggerOverlay` sends:
 
-- Location: Location of this activator
-- Ref1: This activator
-- Ref2: Currently not used
-- Int1: The Location Subtype
-- Int2: The Event Subtype
+- `Location`: current location of the trigger activator.
+- `Ref1`: the trigger activator itself.
+- `Ref2`: currently unused.
+- `Int1`: the location subtype.
+- `Int2`: the event subtype.
 
 ## Location Subtype
 
-These are defined as Global Variables and need to be passed in on the DSETriggerOverlay,
+These are defined as global variables and are assigned on `DSETriggerOverlay`.
 
-### DSELocationType_Disabled (-1)
+### `DSE_LocationType_Disabled` (-1)
 
-Don't Send a Subtype, this is integer value -1
+Use when you do not want to send a meaningful location subtype.
 
-### DSELocationType_Any (0)
+### `DSE_LocationType_Any` (0)
 
-Not really usable how story manager works, if you want any subtype to be valid then don't put a condition looking for it. This is integer value 0.
+This is mostly a placeholder. If any subtype should be valid, do not add a Story Manager condition looking for `Int1`.
 
-### DSELocationType_StorageGeneral (1)
+### `DSE_LocationType_StorageGeneral` (1)
 
-Storage Themed Man Made Clutter, this is integer value 1.
+General storage-themed man-made clutter.
 
-### DSELocationType_StorageFluid (2)
+### `DSE_LocationType_StorageFluid` (2)
 
-Storage Themed Man Made Clutter, this is integer value 2.
+Fluid storage-themed man-made clutter.
 
-### DSELocationType_Solar (3)
+### `DSE_LocationType_Solar` (3)
 
-Solar Power Themed Man Made Clutter, this is integer value 3.
+Solar power-themed man-made clutter.
 
-### DSELocationType_Industrial (4)
+### `DSE_LocationType_Industrial` (4)
 
-Industrial Themed Man Made Clutter, this is integer value 4.
+Industrial-themed man-made clutter.
+
+## Matching Guidance
+
+Only condition on location subtype when the quest content actually depends on the setting. For example, a quest about sabotaging solar equipment should require `DSE_LocationType_Solar`; a generic pirate ambush probably should not care.

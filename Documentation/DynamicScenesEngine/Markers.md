@@ -1,108 +1,147 @@
 # Dynamic Scenes Engine: Markers
 
+DSE markers are the contract between the author-built location and the manager or quest that uses it. The marker tells DSE what kind of point it is; the linked ref keyword tells the manager which group should use it.
+
+Most setup problems come from placing the right marker but linking it with the wrong keyword, or not linking it to the manager at all.
+
 ## Placement Markers
 
-### DSEMarkerCenter (DSECenterLocRef) [REQUIRED]
+### `DSE_Marker_Center` (`DSE_LocRefType_Marker_Center`) [REQUIRED]
 
-This marker marks the center of the POI no real use other then that. Usually I put a box/cylinder primitive to mark the boundaries of the useable space. SQ_Groups uses this as the default spawn point so needs to be on the ground and clear.
+Marks the center of the usable POI space. The spawn system can use this as a fallback/default point, so place it on clear ground where an actor could safely appear.
 
-### MapMarker (MapMarkerRefType) [REQUIRED]
+It is often useful to add a simple primitive around the intended playable area while authoring so you can see the usable footprint.
 
-This the normal BGS map marker and is required for the player to be able to fast travel and find the POI. You can customize the map marker via override name on the ref alias or DefaultAliasMapMarkerScript.
+### `MapMarker` (`DSE_LocRefType_Marker_Map`) [REQUIRED]
 
-### XMarkerHeading [REQUIRED]
+The normal BGS map marker. This is required if the player should be able to discover, fast travel to, or be directed to the POI. You can customize the map marker through alias override naming or the normal map marker scripting path.
 
-This the normal BGS XMarker Heading marker and is required for the player move to functionality and to find the POI.
+### `XMarkerHeading` [RECOMMENDED]
+
+The normal BGS XMarkerHeading used by move-to behavior and authoring conventions. Use it when a quest or scene needs a reliable facing direction or arrival point.
 
 ## Scene Markers
 
-These are key area markers for use in quests scenes and spawning. As many as the location will allow should be added.
+Scene markers define reusable encounter groups. A small location might only support Scene A. A larger POI might support Scene A, B, and C so quests or manager configurations can choose different layouts.
 
-### DSESceneA1 (DSESceneA1LocRef) - DSESceneA3 (DSESceneA3LocRef)
+Each group has separate markers for bosses, minions, and chests:
 
-### DSESceneB1 (DSESceneB1LocRef) - DSESceneB3 (DSESceneB3LocRef)
+- `DSE_Marker_SceneA_Bosses`, `DSE_Marker_SceneA_Minions`, `DSE_Marker_SceneA_Chests`
+- `DSE_Marker_SceneB_Bosses`, `DSE_Marker_SceneB_Minions`, `DSE_Marker_SceneB_Chests`
+- `DSE_Marker_SceneC_Bosses`, `DSE_Marker_SceneC_Minions`, `DSE_Marker_SceneC_Chests`
 
-### DSESceneC1 (DSESceneC1LocRef) - DSESceneC3 (DSESceneC3LocRef)
+Link each one back to the manager with the matching `DSE_LinkedRef_Marker_Scene*_Bosses`, `DSE_LinkedRef_Marker_Scene*_Minions`, or `DSE_LinkedRef_Marker_Scene*_Chests` keyword.
+
+### Boss markers
+
+Use boss markers for leaders, bosses, officers, or other higher-value actors. Place them where the actor can appear cleanly and has a sensible initial position.
+
+### Minion markers
+
+Use minion markers for normal NPCs. Give the group more markers than the minimum when the space allows it; this gives the spawn system better placement options.
+
+### Chest markers
+
+Use chest markers for reward containers or boss chest placement. Keep them reachable and avoid placing them where spawned NPCs will immediately block access.
 
 ## Travel Markers
 
-These are key area markers for use in quests scenes and spawning. They are usually where NPCs will move to after spawning at the center marker or in a scene. These are mirrored from the Radiant Engine system, but I really don't see a need for them.
+Travel markers are mirrored from the Radiant Engine pattern. They are usually points NPCs can move to after spawning at the center marker or in a scene.
 
-### DSETravelA1 (DSETravelA1LocRef) - DSETravelA3 (DSETravelA3LocRef)
+They are not required for basic DSE spawning. Add them only when the quest or custom script needs extra movement targets.
 
-### DSETravelB1 (DSETravelB1LocRef) - DSETravelB3 (DSETravelB3LocRef)
+### `DSETravelA1` (`DSETravelA1LocRef`) - `DSETravelA3` (`DSETravelA3LocRef`)
 
-### DSETravelC1 (DSETravelC1LocRef) - DSETravelC3 (DSETravelC3LocRef)
+### `DSETravelB1` (`DSETravelB1LocRef`) - `DSETravelB3` (`DSETravelB3LocRef`)
+
+### `DSETravelC1` (`DSETravelC1LocRef`) - `DSETravelC3` (`DSETravelC3LocRef`)
 
 ## Important Markers
 
-These are key markers for the quest usually tied to objects
+Important markers are quest-facing points, usually tied to an object the player should find, inspect, loot, or use.
 
-### DSEMarkerSmallImportant (DSEMarkerSmallImportantLocRef)
+### `DSEMarkerSmallImportant` (`DSEMarkerSmallImportantLocRef`)
 
-This is a key quest item for the player to find that reference another location or place to go.
+Use this for a small key quest item, clue, or object that points the player to another location or next step.
 
 ## Spawn Markers
 
+Spawn markers are used by the manager's spawn group definitions. The definition chooses which linked ref keyword to read, and the manager gathers all references linked with that keyword.
+
 ### NPCs
 
-#### Bosses/Leaders
+#### Bosses/leaders
 
-These markers denote where the group's leader would spawn.
+Boss markers denote where the group's leader should spawn.
 
-#### DSEMarker_Boss (DSEMarkerBossLocRef)
+#### `DSEMarker_Boss` (`DSEMarkerBossLocRef`)
 
-#### DSEMarker_Boss_Mini (DSEMarkerMiniBossLocRef)
+#### `DSEMarker_Boss_Mini` (`DSEMarkerMiniBossLocRef`)
+
+#### Minions
+
+Minion markers denote where normal group members should spawn. Use enough markers for the largest minion count configured for that scene group.
 
 ### Containers
 
-These markers control where containers are spawned.
+Container markers control where loot containers are spawned.
 
-#### DSEMarker_Container_Small (DSEContainerSmallLocRef)
+#### `DSEMarker_Container_Small` (`DSEContainerSmallLocRef`)
 
-#### DSEMarker_Container_Large (DSEContainerLargeLocRef)
+#### `DSEMarker_Container_Large` (`DSEContainerLargeLocRef`)
 
-#### DSEMarker_Container_Boss (DSEContainerBossLocRef)
+#### `DSEMarker_Container_Boss` (`DSEContainerBossLocRef`)
 
 ### Clutter
 
-These control markers for spawning random clutter objects usually packins
+Clutter markers control placement for random clutter objects, usually pack-ins. Match the marker size to the space you are offering the clutter system.
 
 #### Sizing
 
-To be noted, a basic chair and file cabinet are 1m x 1m in game.
+A basic chair or file cabinet is roughly 1m x 1m in game. Use that as a practical sanity check when picking marker size.
 
 #### Floor Clutter
 
-- DSEMarker_Clutter_Floor_T1 (DSELocRefType_Clutter_Floor_T1)
+- `DSE_Marker_Clutter_Floor_T1` (`DSE_LocRefType_Clutter_Floor_T1`)
   - Size is 1m by 1m
-- DSEMarker_Clutter_Floor_T2 (DSELocRefType_Clutter_Floor_T2)
+- `DSE_Marker_Clutter_Floor_T2` (`DSE_LocRefType_Clutter_Floor_T2`)
   - Size is 4m by 4m
-- DSEMarker_Clutter_Floor_T3 (DSELocRefType_Clutter_Floor_T3)
+- `DSE_Marker_Clutter_Floor_T3` (`DSE_LocRefType_Clutter_Floor_T3`)
   - Size is 8m by 8m
-- DSEMarker_Clutter_Floor_T4 (DSELocRefType_Clutter_Floor_T4)
+- `DSE_Marker_Clutter_Floor_T4` (`DSE_LocRefType_Clutter_Floor_T4`)
   - Size is 16m by 16m
 
 #### Table/Cabinet Surface Clutter
 
-- DSEMarker_Clutter_Surface_T1 (DSELocRefType_Clutter_Surface_T1)
+- `DSE_Marker_Clutter_Surface_T1` (`DSE_LocRefType_Clutter_Surface_T1`)
   - Size is 5cm by 5cm
-- DSEMarker_Clutter_Surface_T2 (DSELocRefType_Clutter_Surface_T2)
+- `DSE_Marker_Clutter_Surface_T2` (`DSE_LocRefType_Clutter_Surface_T2`)
   - Size is 25cm by 25cm
-- DSEMarker_Clutter_Surface_T3 (DSELocRefType_Clutter_Surface_T3)
+- `DSE_Marker_Clutter_Surface_T3` (`DSE_LocRefType_Clutter_Surface_T3`)
   - Size is 50cm by 50cm
-- DSEMarker_Clutter_Surface_T4 (DSELocRefType_Clutter_Surface_T4)
+- `DSE_Marker_Clutter_Surface_T4` (`DSE_LocRefType_Clutter_Surface_T4`)
   - Size is 1m by 1m
 
 #### Outdoor Clutter
 
-- DSEMarker_Clutter_Outdoor_T1 (DSELocRefType_Clutter_Outdoor_T1)
+- `DSE_Marker_Clutter_Outdoor_T1` (`DSE_LocRefType_Clutter_Outdoor_T1`)
   - Size is 1m by 1m
-- DSEMarker_Clutter_Outdoor_T2 (DSELocRefType_Clutter_Outdoor_T2)
+- `DSE_Marker_Clutter_Outdoor_T2` (`DSE_LocRefType_Clutter_Outdoor_T2`)
   - Size is 4m by 4m
-- DSEMarker_Clutter_Outdoor_T3 (DSELocRefType_Clutter_Outdoor_T3)
+- `DSE_Marker_Clutter_Outdoor_T3` (`DSE_LocRefType_Clutter_Outdoor_T3`)
   - Size is 8m by 8m
-- DSEMarker_Clutter_Outdoor_T4 (DSELocRefType_Clutter_Outdoor_T4)
+- `DSE_Marker_Clutter_Outdoor_T4` (`DSE_LocRefType_Clutter_Outdoor_T4`)
   - Size is 16m by 16m
-- DSEMarker_Clutter_Outdoor_T5 (DSELocRefType_Clutter_Outdoor_T5)
+- `DSE_Marker_Clutter_Outdoor_T5` (`DSE_LocRefType_Clutter_Outdoor_T5`)
   - Size is 32m by 32m
+
+## Placement Checks
+
+Before testing, confirm:
+
+- every required marker is linked to the manager;
+- each link uses the matching `DSE_LinkedRef_*` keyword;
+- actor spawn markers are on navmesh or otherwise safe ground;
+- chest markers are reachable by the player;
+- clutter markers have enough empty space for their tier;
+- the manager's spawn group definition points at the same linked ref keywords you used in the cell.

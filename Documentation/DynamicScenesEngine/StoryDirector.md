@@ -1,9 +1,24 @@
-# Dynamic Scenes Engine:  Story Director
+# Dynamic Scenes Engine: Story Director
 
-**I HAVE NOT REIMPLEMENTED THIS** Free Lanes changed the Radiant Engine pretty heavily and I have not been able to get it to function with the new setup.
+**Current status:** Story Director has not been reimplemented for the current Free Lanes radiant setup. Free Lanes changed the Radiant Engine heavily enough that this path should be treated as experimental design documentation, not a working creator workflow.
 
-Story Director is a bridge between DSE spawners and the Radiant Quest Engine. This means it shares the same restrictions as the radiant quest engine, the main/whopper being it can only deal with PCM World Spaces not instances (dungeons), clutter, and caves.
+Story Director is intended to be the bridge between DSE spawners and the Radiant Quest Engine. The goal is to let a prepared DSE location be selected and configured by quest logic rather than only by a local manager script.
 
-The core of Story Director is the DSEController and DSEOverlayTrigger which use story manager events and quests to reconfigure the cell to match the needs of the quest.
+Because it depends on the radiant quest engine, Story Director inherits the same restrictions. The biggest practical restriction is that radiant selection can only deal with PCM world spaces, not instanced dungeons, clutter pack-ins, or caves.
 
-PLEASE NOTE: Story Director should not be confused with the DSE Scripted Encounters which are a locally trigger papyrus scripted affair which cannot access any of the power of a quest.
+## Intended Pieces
+
+The core pieces are:
+
+- `DSEController`: quest-side or controller-side logic for coordinating a DSE-backed radiant scene.
+- `DSETriggerOverlay`: the trigger object that sends Story Manager events.
+- Story Manager script events: the matching layer that selects a quest based on encounter type, location subtype, event subtype, and normal quest conditions.
+- DSE manager and markers: the local POI setup that the selected quest or controller would reconfigure.
+
+## Difference from Scripted Encounters
+
+Story Director should not be confused with [DSE Scripted Encounters](./Setup-DSE-ScriptedEncounters.md).
+
+Scripted encounters are local Papyrus-driven scenes. They can spawn groups, dress the cell, and react to local triggers, but they do not get the full power of quest aliases, quest stages, objectives, or radiant selection.
+
+Story Director is the quest-driven version of that idea. Once it is working again, it should be the better choice for encounters where the player needs objectives, quest state, dialogue, or other systems that belong in a quest.

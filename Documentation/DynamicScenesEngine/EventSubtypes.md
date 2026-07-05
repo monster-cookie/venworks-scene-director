@@ -1,53 +1,57 @@
 # Dynamic Scenes Engine: Event Subtypes
 
-The story manage script event can take 2 integer values further parsing the results.
+Event subtypes are integer global values sent to Story Manager as `Int2`. They describe the encounter size or event-specific category after the broad encounter keyword has already been chosen.
 
 ## Story Manager Data Packet
 
-Story Manager Data will be:
+`DSETriggerOverlay` sends:
 
-- Location: Location of this activator
-- Ref1: This activator
-- Ref2: Currently not used
-- Int1: The Location Subtype
-- Int2: The Event Subtype
+- `Location`: current location of the trigger activator.
+- `Ref1`: the trigger activator itself.
+- `Ref2`: currently unused.
+- `Int1`: the location subtype.
+- `Int2`: the event subtype.
 
 ## Event Subtypes
 
-These are defined as Global Variables and need to be passed in on the DSETriggerOverlay,
+These are defined as global variables and are assigned on `DSETriggerOverlay`.
 
-### DSEEventType_Disabled
+### `DSE_EventType_Disabled` (-1)
 
-Don't Send a Subtype, this is integer value -1
+Use when you do not want to send a meaningful event subtype.
 
-### DSEEventType_Any
+### `DSE_EventType_Any` (0)
 
-Not really usable how story manager works, if you want any subtype to be valid then don't put a condition looking for it. This is integer value 0.
+This is mostly a placeholder. If any subtype should be valid, do not add a Story Manager condition looking for `Int2`.
 
-### Man Made Clutter Packings
+### Man-made clutter pack-ins
 
-#### DSEEventType_Clutter_Small (1)
+#### `DSE_EventType_Clutter_Small` (1)
 
-This is a small man made clutter packin, really can only spawn 1 group of NPCs. This is integer value 1.
+Small man-made clutter pack-in. Plan for one NPC group.
 
-#### DSEEventType_Clutter_Medium (2)
+#### `DSE_EventType_Clutter_Medium` (2)
 
-This is a medium man made clutter packin, really can spawn 2 groups of NPCs. This is integer value 2.
+Medium man-made clutter pack-in. Plan for up to two NPC groups.
 
-#### DSEEventType_Clutter_Large (3)
+#### `DSE_EventType_Clutter_Large` (3)
 
-This is a large man made clutter packin, really can spawn 3 groups of NPCs safely. This is integer value 3.
+Large man-made clutter pack-in. Plan for up to three NPC groups if the space supports it.
 
 ### Caves
 
-#### DSEEventType_Cave_Small (4)
+#### `DSE_EventType_Cave_Small` (4)
 
-This is a small cave cell, that really can only spawn 1 group of NPCs. This is integer value 4.
+Small cave cell. Plan for one NPC group.
 
-#### DSEEventType_Cave_Medium (5)
+#### `DSE_EventType_Cave_Medium` (5)
 
-This is a medium sized cave cell, that can safely spawn 2 group of NPCs. This is integer value 5.
+Medium cave cell. Plan for up to two NPC groups.
 
-#### DSEEventType_Cave_Large (6)
+#### `DSE_EventType_Cave_Large` (6)
 
-This is a large sized cave cell, that can safely spawn 3 group of NPCs. This is integer value 6.
+Large cave cell. Plan for up to three NPC groups if the layout has enough room.
+
+## Matching Guidance
+
+Use event subtype to protect encounter scale. A large combat quest should condition on a large event subtype, while a small ambush should accept small spaces. If the quest scales its own spawn counts safely, skip the subtype condition and let it run in more places.

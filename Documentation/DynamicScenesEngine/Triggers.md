@@ -1,37 +1,54 @@
 # Dynamic Scenes Engine: Triggers
 
-Like the BGS Radiant Engine, Dynamic Scenes Engine uses a variety of triggers and markers in a POI to redesign the POI to match the story elements needed for a quest/story.
+Like the BGS Radiant Engine, Dynamic Scenes Engine uses triggers and markers in a POI to decide what story or encounter content should run there.
+
+A DSE trigger is the Story Manager entry point. It gathers context from the current reference and sends a script event using the configured encounter keyword. Story Manager conditions can then choose a quest based on the keyword, location, trigger reference, location subtype, and event subtype.
 
 ## Story Manager Data Packet
 
-Story Manager Data will be:
+`DSETriggerOverlay` sends the following data:
 
-- Location: Location of this activator
-- Ref1: This activator
-- Ref2: Currently not used
-- Int1: The Location Subtype
-- Int2: The Event Subtype
+- `Location`: current location of the trigger activator.
+- `Ref1`: the trigger activator itself.
+- `Ref2`: currently unused.
+- `Int1`: the selected location subtype global value.
+- `Int2`: the selected event subtype global value.
+
+The trigger can run on cell load or when the player enters the trigger volume, depending on the `TriggerType` property.
 
 ## Trigger Variants [REQUIRED]
 
-One of these is required in all Scene Manager managed POI and should be in the middle of the POI like SMMarker_Center.
+One trigger variant is required for any Story Manager-managed POI. Place it where it represents the encounter cleanly, usually near the center marker or the natural player entry point.
+
+The important setup fields are:
+
+- `TriggerType`: `0` for cell load, `1` for player trigger enter.
+- `StoryEventKeyword`: the encounter type keyword to send.
+- `LocationType`: global variable sent as `Int1`.
+- `EventSubType`: global variable sent as `Int2`.
 
 ### DSETriggerStoryPOI
 
-This controls contacting the story manager to request a radiant quest (using the DSEEncounterTypeStoryPOI event keyword) for the POI.
+Requests a radiant quest for a normal POI using the `DSE_EncounterType_Story_POI` event keyword.
 
 ### DSETriggerStoryClutter
 
-This controls contacting the story manager to request a radiant quest (using the DSEEncounterTypeStoryClutter event keyword) for the POI.
+Requests a radiant quest for a man-made clutter pack-in using the `DSE_EncounterType_Story_ManMadeClutter` event keyword.
 
 ### DSETriggerStoryCaves
 
-This controls contacting the story manager to request a radiant quest (using the DSEEncounterTypeStoryCaves event keyword) for the POI.
+Requests a radiant quest for a cave using the `DSE_EncounterType_Story_Cave` event keyword.
 
 ### DSETriggerStoryShip
 
-This controls contacting the story manager to request a radiant quest (using the DSEEncounterTypeStoryShip event keyword) for the POI.
+Requests a radiant quest for a ship using the `DSE_EncounterType_Story_Ship` event keyword.
 
 ### DSETriggerStorySpace
 
-This controls contacting the story manager to request a radiant quest (using the DSEEncounterTypeStorySpace event keyword) for the POI.
+Requests a radiant quest for a space encounter using the `DSE_EncounterType_Story_Space` event keyword.
+
+## Authoring Notes
+
+Use the encounter keyword for the broad content family, then use location and event subtypes only when a quest needs more specific matching. If a quest should accept any location subtype or event subtype, do not add a Story Manager condition for that value.
+
+When debugging, check logs for the `DSETriggerOverlay` `StartEncounter()` message. It reports the keyword, location, references, and integer values sent to Story Manager.
