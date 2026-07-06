@@ -57,6 +57,9 @@ VirtualMachineAdapter:
           Name: LinkRefKeywordForBossSpawnPoints
           Object: 00000E:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
+          Name: GroupFaction
+          Object: 000003:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
           Name: MinionsChanceToSpawn
           Object: 000DEE:Venworks-DynamicScenesEngine.esm
         - MutagenObjectType: ScriptObjectProperty
@@ -77,9 +80,6 @@ VirtualMachineAdapter:
         - MutagenObjectType: ScriptIntProperty
           Name: MinionsMaxToSpawn
           Data: 4
-        - MutagenObjectType: ScriptObjectProperty
-          Name: GroupFaction
-          Object: 000003:Venworks-DynamicScenesEngine.esm
     - MutagenObjectType: ScriptObjectProperty
       Name: SQ_DSE_FactionConfiguration
       Object: 0000CD:Venworks-DynamicScenesEngine.esm

@@ -34,5 +34,165 @@ GNAM: 1
 CellWaterHeightLocations: []
 WaterHeights: []
 HNAM: 0x00
+TopCell:
+  FormKey: 325892:Starfield.esm
+  IsCompressed: True
+  MajorRecordFlagsRaw: 263168
+  FormVersion: 582
+  Version2: 1
+  StarfieldMajorRecordFlags:
+  - 0x400
+  - Compressed
+  Flags:
+  - HasWater
+  Grid:
+    Point: 2147483647, 2147483647
+  LightingTemplate: Null
+  WaterHeight: 3.4028235E+38
+  XILS: 1
+  Persistent:
+  - MutagenObjectType: PlacedObject
+    FormKey: 000806:Venworks-DynamicScenesEngine.esm
+    MajorRecordFlagsRaw: 1024
+    EditorID: DSE_OnClose_Trigger_Test
+    FormVersion: 582
+    StarfieldMajorRecordFlags:
+    - 0x400
+    VirtualMachineAdapter:
+      Scripts:
+      - Name: Venworks:DynamicScenesEngine:Managers:DSEManager_OnClose
+        Properties:
+        - MutagenObjectType: ScriptObjectProperty
+          Name: DSE_LinkedRef_Marker_Center
+          Object: 000F8D:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: DSE_LinkedRef_Marker_Map
+          Object: 000F8C:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: DSE_LinkedRef_Marker_SceneA_Bosses
+          Object: 00000E:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: DSE_LinkedRef_Marker_SceneA_Chests
+          Object: 000006:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: DSE_LinkedRef_Marker_SceneA_Minions
+          Object: 00000F:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: DSE_LinkedRef_Marker_SceneB_Bosses
+          Object: 00000C:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: DSE_LinkedRef_Marker_SceneB_Chests
+          Object: 00000B:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: DSE_LinkedRef_Marker_SceneB_Minions
+          Object: 00000D:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: DSE_LinkedRef_Marker_SceneC_Bosses
+          Object: 000012:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: DSE_LinkedRef_Marker_SceneC_Chests
+          Object: 000010:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: DSE_LinkedRef_Marker_SceneC_Minions
+          Object: 000011:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: GlobalChanceToSpawn
+          Object: 000DF3:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptIntProperty
+          Name: Mode
+        - MutagenObjectType: ScriptStructListProperty
+          Name: SpawnGroupDefinitions
+          Structs:
+          - Members:
+            - MutagenObjectType: ScriptIntProperty
+              Name: BossesMinToSpawn
+              Data: 1
+            - MutagenObjectType: ScriptIntProperty
+              Name: MinionsMinToSpawn
+              Data: 2
+            - MutagenObjectType: ScriptObjectProperty
+              Name: GroupFaction
+              Object: 0546E0:Starfield.esm
+            - MutagenObjectType: ScriptIntProperty
+              Name: BossesMaxToSpawn
+              Data: 1
+            - MutagenObjectType: ScriptObjectProperty
+              Name: BossesChanceToSpawn
+              Object: 000DF3:Venworks-DynamicScenesEngine.esm
+            - MutagenObjectType: ScriptObjectProperty
+              Name: LinkRefKeywordForChestSpawnPoints
+              Object: 000006:Venworks-DynamicScenesEngine.esm
+            - MutagenObjectType: ScriptObjectProperty
+              Name: LinkRefKeywordForMinionSpawnPoints
+              Object: 00000F:Venworks-DynamicScenesEngine.esm
+            - MutagenObjectType: ScriptObjectProperty
+              Name: LinkRefKeywordForBossSpawnPoints
+              Object: 00000E:Venworks-DynamicScenesEngine.esm
+            - MutagenObjectType: ScriptObjectProperty
+              Name: MinionsChanceToSpawn
+              Object: 000DEE:Venworks-DynamicScenesEngine.esm
+            - MutagenObjectType: ScriptIntProperty
+              Name: MinionsMaxToSpawn
+              Data: 4
+        - MutagenObjectType: ScriptObjectProperty
+          Name: SQ_DSE_FactionConfiguration
+          Object: 0000CD:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: SQ_DSE_SpawnSystem
+          Object: 0000CC:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptIntProperty
+          Name: TimerDelay
+        - MutagenObjectType: ScriptIntProperty
+          Name: Waves
+          Data: 1
+    Base: 3CEEF3:Starfield.esm
+    Position: 4.9902916, 147.66632, 72.9
+    Rotation: 0, 0, 5.550147
+  - MutagenObjectType: PlacedObject
+    FormKey: 000CB2:Venworks-DynamicScenesEngine.esm
+    MajorRecordFlagsRaw: 1024
+    EditorID: DSE_OnTrigger_Trigger_Test
+    FormVersion: 582
+    StarfieldMajorRecordFlags:
+    - 0x400
+    VirtualMachineAdapter:
+      Scripts:
+      - Name: Venworks:DynamicScenesEngine:Managers:DSEManager_OnTriggerEnter
+        Flags: Inherited
+        Properties:
+        - MutagenObjectType: ScriptStructListProperty
+          Name: SpawnGroupDefinitions
+          Structs:
+          - Members:
+            - MutagenObjectType: ScriptObjectProperty
+              Name: GroupFaction
+              Object: 000003:Venworks-DynamicScenesEngine.esm
+            - MutagenObjectType: ScriptObjectProperty
+              Name: BossesChanceToSpawn
+              Object: 000DF5:Venworks-DynamicScenesEngine.esm
+            - MutagenObjectType: ScriptObjectProperty
+              Name: MinionsChanceToSpawn
+              Object: 000DF3:Venworks-DynamicScenesEngine.esm
+            - MutagenObjectType: ScriptObjectProperty
+              Name: LinkRefKeywordForBossSpawnPoints
+              Object: 00000C:Venworks-DynamicScenesEngine.esm
+            - MutagenObjectType: ScriptObjectProperty
+              Name: LinkRefKeywordForMinionSpawnPoints
+              Object: 00000D:Venworks-DynamicScenesEngine.esm
+            - MutagenObjectType: ScriptObjectProperty
+              Name: LinkRefKeywordForChestSpawnPoints
+              Object: 00000B:Venworks-DynamicScenesEngine.esm
+    Base: 000D60:Venworks-DynamicScenesEngine.esm
+    Primitive:
+      Bounds: 90, 90, 90
+      Color: '#00CC4C33'
+      Unknown: 0.3
+      Type: Sphere
+    Collision:
+      CollisionLayer: 12
+    Position: 65.01717, 111.76772, 57.31413
+  MajorFlags:
+  - Persistent
+  - 0x40000
 MajorFlags:
 - 0x4

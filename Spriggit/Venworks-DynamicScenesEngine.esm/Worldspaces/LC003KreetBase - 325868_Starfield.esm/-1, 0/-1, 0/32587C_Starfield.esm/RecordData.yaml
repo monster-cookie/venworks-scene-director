@@ -101128,7 +101128,6 @@ Temporary:
   LinkedReferences:
   - KeywordOrReference: 00000F:Venworks-DynamicScenesEngine.esm
     Reference: 000806:Venworks-DynamicScenesEngine.esm
-  IsLinkedRefTransient: True
   Position: -5.566269, 103.85096, 68.58673
 - MutagenObjectType: PlacedObject
   FormKey: 000D9E:Venworks-DynamicScenesEngine.esm
@@ -101138,7 +101137,6 @@ Temporary:
   LinkedReferences:
   - KeywordOrReference: 00000F:Venworks-DynamicScenesEngine.esm
     Reference: 000806:Venworks-DynamicScenesEngine.esm
-  IsLinkedRefTransient: True
   Position: -16.635712, 104.813614, 69.28014
 - MutagenObjectType: PlacedObject
   FormKey: 000D9F:Venworks-DynamicScenesEngine.esm
@@ -101148,7 +101146,6 @@ Temporary:
   LinkedReferences:
   - KeywordOrReference: 00000F:Venworks-DynamicScenesEngine.esm
     Reference: 000806:Venworks-DynamicScenesEngine.esm
-  IsLinkedRefTransient: True
   Position: -22.206085, 141.19955, 74.99642
 - MutagenObjectType: PlacedObject
   FormKey: 000DA3:Venworks-DynamicScenesEngine.esm
@@ -101158,7 +101155,6 @@ Temporary:
   LinkedReferences:
   - KeywordOrReference: 00000F:Venworks-DynamicScenesEngine.esm
     Reference: 000806:Venworks-DynamicScenesEngine.esm
-  IsLinkedRefTransient: True
   Position: -9.361359, 162.31958, 76.84299
 MajorFlags:
 - 0x40000

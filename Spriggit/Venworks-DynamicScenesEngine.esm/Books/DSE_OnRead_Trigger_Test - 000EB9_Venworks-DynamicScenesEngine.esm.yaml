@@ -1,0 +1,155 @@
+FormKey: 000EB9:Venworks-DynamicScenesEngine.esm
+EditorID: DSE_OnRead_Trigger_Test
+FormVersion: 582
+VirtualMachineAdapter:
+  Scripts:
+  - Name: Venworks:DynamicScenesEngine:Managers:DSEManager_OnRead
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DSE_LinkedRef_Marker_Center
+      Object: 000F8D:Venworks-DynamicScenesEngine.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DSE_LinkedRef_Marker_Map
+      Object: 000F8C:Venworks-DynamicScenesEngine.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DSE_LinkedRef_Marker_SceneA_Bosses
+      Object: 00000E:Venworks-DynamicScenesEngine.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DSE_LinkedRef_Marker_SceneA_Chests
+      Object: 000006:Venworks-DynamicScenesEngine.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DSE_LinkedRef_Marker_SceneA_Minions
+      Object: 00000F:Venworks-DynamicScenesEngine.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DSE_LinkedRef_Marker_SceneB_Bosses
+      Object: 00000C:Venworks-DynamicScenesEngine.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DSE_LinkedRef_Marker_SceneB_Chests
+      Object: 00000B:Venworks-DynamicScenesEngine.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DSE_LinkedRef_Marker_SceneB_Minions
+      Object: 00000D:Venworks-DynamicScenesEngine.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DSE_LinkedRef_Marker_SceneC_Bosses
+      Object: 000012:Venworks-DynamicScenesEngine.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DSE_LinkedRef_Marker_SceneC_Chests
+      Object: 000010:Venworks-DynamicScenesEngine.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DSE_LinkedRef_Marker_SceneC_Minions
+      Object: 000011:Venworks-DynamicScenesEngine.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: GlobalChanceToSpawn
+      Object: 000DEE:Venworks-DynamicScenesEngine.esm
+    - MutagenObjectType: ScriptIntProperty
+      Name: Mode
+      Data: 1
+    - MutagenObjectType: ScriptStructListProperty
+      Name: SpawnGroupDefinitions
+      Structs:
+      - Members:
+        - MutagenObjectType: ScriptIntProperty
+          Name: BossesMinToSpawn
+          Data: 1
+        - MutagenObjectType: ScriptIntProperty
+          Name: MinionsMaxToSpawn
+          Data: 4
+        - MutagenObjectType: ScriptObjectProperty
+          Name: GroupFaction
+          Object: 0546E0:Starfield.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: MinionsChanceToSpawn
+          Object: 000DF3:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: LinkRefKeywordForBossSpawnPoints
+          Object: 00000E:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: LinkRefKeywordForChestSpawnPoints
+          Object: 000006:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptIntProperty
+          Name: BossesMaxToSpawn
+          Data: 1
+        - MutagenObjectType: ScriptIntProperty
+          Name: MinionsMinToSpawn
+          Data: 2
+        - MutagenObjectType: ScriptObjectProperty
+          Name: BossesChanceToSpawn
+          Object: 000DF5:Venworks-DynamicScenesEngine.esm
+        - MutagenObjectType: ScriptObjectProperty
+          Name: LinkRefKeywordForMinionSpawnPoints
+          Object: 00000F:Venworks-DynamicScenesEngine.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: SQ_DSE_FactionConfiguration
+      Object: 0000CD:Venworks-DynamicScenesEngine.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: SQ_DSE_SpawnSystem
+      Object: 0000CC:Venworks-DynamicScenesEngine.esm
+    - MutagenObjectType: ScriptIntProperty
+      Name: TimerDelay
+      Data: 15
+    - MutagenObjectType: ScriptIntProperty
+      Name: Waves
+      Data: 2
+ObjectBounds:
+  First: -0.08850098, -0.06524568, -0.00024414062
+  Second: 0.0881958, 0.06524748, 0.021881104
+Transforms:
+  Inventory: 0162A7:Starfield.esm
+XALG: 8
+Components:
+- MutagenObjectType: LodOwnerComponent
+  REFL: 0x4245544808000000040000000B000000535452540C0100004247534C6F644F776E6572436F6D706F6E656E740053657474696E677354656D706C617465004D6573684C4F4444697374616E63654F7665727269646500456E61626C6564004261736544697374616E6365004F766572726964654D6573684C4F4444697374616E636500436F6E666967757261626C654C4F44446174613C332C20333E004D6573684F7665727269646573004F766572726964654C6576656C436F756E7400446573697265644C4F444C6576656C436F756E74004D6573684C4F447300436F6E666967757261626C654C4F44446174613C342C20343E0044697374616E744C4F4473004C4F444D6573684F7665727269646573004D65736846696C654F7665727269646500545950450400000005000000434C41533C000000C400000000000000000004003E00000010FFFFFF080001008500000003FFFFFF180020009300000010FFFFFF38000100A60000000DFFFFFF3C000400434C4153240000002600000000000000000002003E00000010FFFFFF080001004600000011FFFFFF0C000400434C41533C0000000000000000000000000004001500000002FFFFFF48000800530000002600000050001000BB0000006B00000060003800DE000000C400000098004000434C41533C0000006B00000000000000000004003E00000010FFFFFF080001008500000003FFFFFF180018009300000010FFFFFF30000100A60000000DFFFFFF34000400434C415318000000EA0000000000000000000100FB00000002FFFFFF000008004F424A5421000000000000000A00526564756374696F6E0000000000000000030000000000040000004C49535411000000EA000000030000000100000100000100004C49535414000000EA00000004000000010000010000010000010000
+Name:
+  TargetLanguage: English
+  Value: Confidential Documents
+Model:
+  File: Items\DataSlate\DataSlate01.nif
+  LightLayer: 1
+Text:
+  TargetLanguage: English
+  Value: >-
+    To the dock rats, rookies, and anyone else still breathing on purpose:
+
+
+    The next nosy explorer or bounty hunter who wanders into this base is not to be shot on sight. Read that again if your helmet's on too tight.
+
+
+    Let them come in. Let them sniff around. Let them think they found something worth stealing.
+
+
+    Once they're past the main entry and deep enough that running starts looking like a life choice, trigger the trap. No early fireworks. No showing off. No "accidental" button pressing because you got jumpy. Wait until they're boxed in, then spring it.
+
+
+    When the signal hits, send in a proper welcome party. Two to four of you get in there fast, weapons hot, mouths shut. The boss will follow in once the mark is softened up.
+
+
+    And if any of you forget to pull the trigger on this little surprise, I'll feed you to the Terrormorph myself and tell everyone you volunteered.
+
+
+    Keep it sharp. Keep it bloody. Keep it ours.
+
+
+    Captain's orders.
+PickupSound:
+  Start: 3ab34823-87d6-d2c0-6fc0-21a73d163797
+DropdownSound:
+  Start: 6c474054-5b00-4ba2-302a-3ac846a9f190
+Keywords:
+- 1FC86C:Starfield.esm
+- 100557:Starfield.esm
+Flags:
+- 0x20
+Teaches:
+  MutagenObjectType: BookTeachesNothing
+  RawContent: 0
+DataSlateType: Text
+Description:
+  TargetLanguage: English
+  Value: ''
+DataSlateHeaderLeft:
+  TargetLanguage: English
+  Value: 'From: Crimson Fleet'
+DataSlateHeaderRight:
+  TargetLanguage: English
+  Value: Don't Forget The Trap
+InventoryArt: 0C64CD:Starfield.esm
