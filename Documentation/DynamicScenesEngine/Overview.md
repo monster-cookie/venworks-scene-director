@@ -1,6 +1,6 @@
 # Dynamic Scenes Engine: Overview
 
-Dynamic Scenes Engine (DSE) is a smaller, POI-focused version of Bethesda's radiant encounter pattern. It gives a mod author a way to prepare a location, clutter pack-in, cave, ship, or space encounter with markers and then let either a local manager script or Story Manager-driven quest decide what actually appears there.
+Dynamic Scenes Engine (DSE) is a smaller, POI-focused version of Bethesda's Radiant Engine. It gives a mod author a way to prepare a location, clutter pack-in, cave, ship, or space encounter with markers and then let either a local manager script or Story Manager-driven quest decide what actually appears there.
 
 DSE is intended for mod creators. The player should only experience the result: a POI that can be repopulated, dressed, renamed, or used as a quest scene without requiring every variant to be hand-built as a separate location.
 
