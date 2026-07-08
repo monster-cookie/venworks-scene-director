@@ -26,7 +26,7 @@ Each package includes `Staging/Venworks-DynamicScenesEngine.esm` and the platfor
 
 - PC: PC BA2 archives only. These are BA2 files that do not end in `_XBox.ba2` or `_PS.ba2`.
 - XBox: XBox BA2 archives only. These are BA2 files that end in `_XBox.ba2`.
-- PS5: PC BA2 archives copied with PS archive names, such as `Venworks-DynamicScenesEngine_Main_PS.ba2`.
+- PS5: PS BA2 archives only. These are BA2 files that end in `_PS.ba2`.
 - Creations Site: PC archives, XBox archives, and generated PS5 archive copies in one zip for Bethesda Game Studios Creations upload workflows.
 
 No loose scripts, source files, ESP files, metadata files, or local tool outputs are included in published zips. GitHub Releases receives all four zips. Nexus Mods receives only the PC zip.
