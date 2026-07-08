@@ -1,53 +1,89 @@
-[size=4][u][b]Overview [/b][/u][/size]
+[size=4][u][b]Overview[/b][/u][/size]
 
-TEMPLATE NOTE: Creation overview goes here
+Venworks - Dynamic Scenes Engine (DSE) is a Starfield creator framework for building reusable dynamic scenes inside POIs, caves, ships, space encounters, and man-made clutter pack-ins.
+
+The short version: DSE gives mod authors a marker-and-manager system for preparing a location once, then letting scripts or DSE managers decide what appears there. A DSE-ready space can be repopulated, dressed, renamed, used for a quest scene, or turned into a local encounter without hand-building every variant as a separate location.
+
+Players should mostly experience the result: more dynamic and replayable locations and encounters.
 
 [size=3][b][u]Features[/u][/b][/size]
 [list]
-[*]Feature 1[/*]
-[*]Feature 2[/*]
-[*]Etc.....[/*]
+[*]Creator-built POIs that can spawn NPCs, chests, clutter, or scripted scene objects when the player enters, opens, reads, closes, or loads into the prepared area.[/*]
+[*]Reusable encounter layouts using linked Scene A, Scene B, and Scene C marker groups for bosses, minions, and chests.[/*]
+[*]Faction-based spawn groups for common Starfield encounter families such as Spacers, Ecliptic, Crimson Fleet, House Va'ruun, Syndicate, The First, Starborn, Sirens, Terrormorphs, biome predators, and robots.[/*]
+[*]Clutter marker vocabulary for floor, surface, and outdoor placement points at practical authoring sizes.[/*]
+[*]A shared foundation for future Venworks and compatible third-party dynamic encounter content.[/*]
 [/list]
 
 [size=3][b][u]Roadmap[/u][/b][/size]
+
+[size=2][b][u]Near Term[/u][/b][/size]
 [list]
-[*]Enhancement 1[/*]
-[*]Enhancement 2[/*]
-[*]Etc.....[/*]
+[*]Add more scene groups for using in world spaces.[/*]
+[*]Pull in the remaining dynamic clutter items from Venworks Encounters Overhaul, such as camp sleeping bags.[/*]
+[*]Restore Story Mode from ADV Inc.[/*]
 [/list]
 
-[size=3][b][u]Known Issues[/u][/b][/size]
+[size=2][b][u]Future Work[/u][/b][/size]
 [list]
-[*]Known Issue 1[/*]
-[*]Known Issue 2[/*]
-[*]Etc.....[/*]
+[*]Add many more dynamic clutter options, including new clutter content.[/*]
+[*]Add support for Modular NPC Creation System (MCS).[/*]
+[*]Continue building out the shared DSE foundation for future Venworks dynamic encounter content.[/*]
 [/list]
+
+[size=3][b][u]Known Issues[/b][/u][/size]
+
+None currently 
 
 [size=4][b][u]Usage Instructions[/u][/b][/size]
 
-TEMPLATE NOTE: Creation usage instructions go here
+[size=3][b][u]For Players[/u][/b][/size]
+
+Install this like a normal Starfield plugin requirement. DSE is mainly a framework, so it is most useful when another mod uses it or when you are looking at the included example content.
+
+[list]
+[*]Install Venworks - Core 2.1.1 or newer first.[/*]
+[*]Install Venworks - Dynamic Scenes Engine after Venworks - Core.[/*]
+[*]Keep DSE enabled before any mod that lists it as a requirement.[/*]
+[*]If you are troubleshooting, enable DSE debug mode only when you need extra logging or authoring feedback.[/*]
+[/list]
+
+[size=3][b][u]For Mod Authors[/u][/b][/size]
+
+The creator workflow is:
+
+[list]
+[*]Place the DSE manager or trigger object that owns the encounter.[/*]
+[*]Place a center marker and map marker for the usable scene space.[/*]
+[*]Place Scene A, Scene B, and/or Scene C markers for bosses, minions, and chests.[/*]
+[*]Link every marker back to the manager with the matching DSE linked reference keyword.[/*]
+[*]Configure spawn groups, faction data, chance conditions, and wave behavior values.[/*]
+[*]Test a small encounter first, then expand to additional scene groups, waves, clutter, or DSE Manager behavior.[/*]
+[/list]
+
+Most setup problems come from marker links. If the manager fires but actors or chests do not appear, check that each marker is linked to the manager with the exact keyword used by the spawn group definition. Also remember each level (manager, faction selection, bosses/minions) has a randomization chance. Enabling debug mode will force all spawning to occur regardless of spawn chance.
+
+[size=4][b][u]Requirements[/u][/b][/size]
+[list]
+[*]Starfield[/*]
+[*][url=https://www.nexusmods.com/starfield/mods/7097]Venworks - Core[/url] 2.1.1 or newer[/*]
+[/list]
 
 [size=4][b][u]Compatibility[/u][/b][/size]
-Below are Creations we have known compatibility problems with and workarounds if we have them.
-[list]
-[*]Creation 1[/*]
-[*]Creation 2[/*]
-[*]Etc.....[/*]
-[/list]
+
+Currently we do not know of any compatibility issues
 
 [size=4][u][b]Installation Instructions[/b][/u][/size]
 
 [size=3][b][u]Via Vortex/MO2[/u][/b][/size]
-Install as normally would any mod. 
+Install as you normally would any Starfield mod. Make sure Venworks - Core 2.1.1 or newer is installed and enabled.
 
 [size=3][b][u]Manually[/u][/b][/size]
-Really please use a mod manager :) 
+Really, please use a mod manager :)
 
-Download the current zip file. Please everything in the Data folder in the zip to the same place under <Game Install Dir aka where starfield.exe is>\Data.  
+Download the current zip file. Place everything in the Data folder in the zip into the matching Data folder under your Starfield install directory, the same directory tree that contains Starfield.exe.
 
 [size=4][u][b]My Other Creations[/b][/u][/size]
-
-TEMPLATE NOTE: Use this section to advertise your other creations like I am here.
 
 [size=3][b][u]Modding Tools[/u][/b][/size]
 [list]
@@ -56,7 +92,7 @@ TEMPLATE NOTE: Use this section to advertise your other creations like I am here
 
 [size=3][b][u]Starfield[/u][/b][/size]
 [list]
-[*][url=https://www.nexusmods.com/starfield/mods/7097]Venworks - Core[/url]: An utility library all my creations share[/*]
+[*][url=https://www.nexusmods.com/starfield/mods/7097]Venworks - Core[/url]: A utility library all my creations share[/*]
 [*][url=https://www.nexusmods.com/starfield/mods/8050]Venworks - Encounters Overhaul[/url]: Fixes the open world caves and encounters that do not spawn enemies unless you are on a rare random encounter quest so are completely empty most of the time[/*]
 [*][url=https://www.nexusmods.com/starfield/mods/17104]Venworks - HONKCORE - UI Themes[/url]: Provides multiple faction themes for HONKCORE[/*]
 [*][url=https://www.nexusmods.com/starfield/mods/8411]Fix for Walter Vanishing in MQ101 and blocking quests[/url]: If certain level lists are overridden Walter stops functioning and vanishes, this stops that[/*]
@@ -71,6 +107,4 @@ TEMPLATE NOTE: Use this section to advertise your other creations like I am here
 
 [b][u][size=4]Source Code[/size][/u][/b]
 
-TEMPLATE NOTE: If you have it and want too, it is considered good form to give access to your repository
-
-The source code to this is on GitHub under the repository [url=https://github.com/monster-cookie/venworks-template]venworks-template[/url]
+The source code is available on GitHub under the repository [url=https://github.com/monster-cookie/venworks-scene-director]venworks-scene-director[/url].
