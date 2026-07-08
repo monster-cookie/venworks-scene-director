@@ -56,4 +56,3 @@ Release notes come from the matching `## Version x.y.z` section in [CHANGELOG.md
 ## License
 
 This repository is licensed under the terms in [LICENSE](LICENSE).
-

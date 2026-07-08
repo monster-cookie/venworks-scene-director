@@ -2,7 +2,8 @@
 
 ## 1 Month
 
-- Pull in the remaining dynamic clutter items from Encounters Overhaul like the camp sleeping bags. 
+- Add more scene groups for using in world spaces.
+- Pull in the remaining dynamic clutter items from Encounters Overhaul like the camp sleeping bags.
 - Restore Story Mode from ADV Inc
 
 ## 3 Months
