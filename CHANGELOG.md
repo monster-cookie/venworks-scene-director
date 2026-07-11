@@ -1,5 +1,9 @@
 # Venworks Dynamic Scenes Engine: Change Log
 
+## Version 1.0.2
+
+- Stupid archiver will pull in any BA2 in the Staging directory. I've added an exclusion. I should have caught that when it was pulling in the esp/esm.
+
 ## Version 1.0.1
 
 - No changes, just a rebuild to switch to Nexus API deployments.
