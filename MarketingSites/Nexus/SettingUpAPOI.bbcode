@@ -1,0 +1,107 @@
+[size=4][u][b]Dynamic Scenes Engine: Setting up a POI[/b][/u][/size]
+
+This page describes the minimum setup for a POI, cave, clutter pack-in, or similar encounter space that should be managed by Dynamic Scenes Engine.
+
+The short version: place a manager, place markers, link the markers back to the manager with the correct [b]DSE_LinkedRef_*[/b] keywords, then configure the manager's spawn groups.
+
+[size=3][b][u]Required Components[/u][/b][/size]
+
+The following activators and statics must be present in the scene, pack-in, or POI or DSE will not have enough information to work. All markers need to be linked by keyword to the parent manager.
+
+[size=2][b][u]Scene manager[/u][/b][/size]
+
+A scene manager is required. Use one of the provided manager activators, such as [b]DSE_Manager_ActivatorOnEnter[/b] or [b]DSE_Manager_CellOnLoad[/b], unless you intentionally need a custom object with the matching [b]DSEManager[/b] script attached.
+
+The manager owns the local encounter configuration:
+
+[list]
+[*]when the encounter should run;[/*]
+[*]whether the encounter can spawn based on chance conditions;[/*]
+[*]which spawn group definitions are available;[/*]
+[*]which linked marker groups should be used for bosses, minions, and chests;[/*]
+[*]whether waves or timer-delayed waves should be used.[/*]
+[/list]
+
+All spawn markers must be linked to this manager for NPC and chest spawning to function at game time.
+
+[size=2][b][u]Required marker links[/u][/b][/size]
+
+At minimum, link these references back to the manager:
+
+[list]
+[*]center marker with [b]DSE_LinkedRef_Marker_Center[/b];[/*]
+[*]map marker with [b]DSE_LinkedRef_Marker_Map[/b];[/*]
+[*]at least one boss marker for the active scene group;[/*]
+[*]at least two minion markers for the active scene group;[/*]
+[*]at least one chest marker if the encounter can spawn a boss chest.[/*]
+[/list]
+
+Use the scene-specific linked ref keyword that matches the group you are configuring. For example, Scene A boss markers should use [b]DSE_LinkedRef_Marker_SceneA_Bosses[/b], Scene A minions should use [b]DSE_LinkedRef_Marker_SceneA_Minions[/b], and Scene A chests should use [b]DSE_LinkedRef_Marker_SceneA_Chests[/b].
+
+[size=2][b][u]Scene group markers[/u][/b][/size]
+
+You must have at least one scene group, but you can define as many as the POI can support. Scene groups let the same POI support multiple encounter layouts, such as a small patrol in one area or a larger fight that uses the whole location.
+
+The current built-in group vocabulary is:
+
+[list]
+[*]Scene A: bosses, minions, and chests;[/*]
+[*]Scene B: bosses, minions, and chests;[/*]
+[*]Scene C: bosses, minions, and chests.[/*]
+[/list]
+
+[b]HINT:[/b] Use the ref window batch editor in the View menu to link everything. You can select a group of references in the cell, then use the LinkedRef mode of the editor to link them all to the manager in one shot. This seriously speeds up authoring work.
+
+[b][u]Boss markers[/u][/b]
+
+Place at least one boss marker for any scene group that can spawn a leader, boss, officer, or other high-value actor. Boss markers are passed to the spawn system through the group's [b]LinkRefKeywordForBossSpawnPoints[/b].
+
+[b][u]Minion markers[/u][/b]
+
+Place at least two minion markers for any scene group that can spawn normal enemies. More markers give the spawn system room to vary the encounter and reduce the chance that actors stack on top of each other.
+
+[b][u]Chest markers[/u][/b]
+
+Place at least one chest marker for any scene group that can spawn a boss chest or other reward container. Chest spawning is wired through the group configuration even if a specific encounter decides not to use it yet.
+
+[size=3][b][u]Manager Configuration Checklist[/u][/b][/size]
+
+Configure the manager script before testing:
+
+[list]
+[*][b]Mode[/b]: use normal single-spawn mode unless you specifically need waves.[/*]
+[*][b]Waves[/b]: use [b]1[/b] for a single wave; use higher values for limited waves; use [b]0[/b] only when you intentionally want infinite waves.[/*]
+[*][b]TimerDelay[/b]: use [b]0[/b] for the default wave delay behavior, or set a specific number of seconds between waves.[/*]
+[*][b]GlobalChanceToSpawn[/b]: condition form that decides whether the encounter runs.[/*]
+[*][b]PlayerCompleted[/b]: optional global that is set when the manager successfully starts the encounter.[/*]
+[*][b]SpawnGroupDefinitions[/b]: at least one spawn group definition is required.[/*]
+[/list]
+
+Each spawn group definition should identify:
+
+[list]
+[*]the faction keyword to spawn;[/*]
+[*]boss and minion chance conditions;[/*]
+[*]min and max boss counts;[/*]
+[*]min and max minion counts;[/*]
+[*]the linked ref keyword for boss spawn points;[/*]
+[*]the linked ref keyword for minion spawn points;[/*]
+[*]the linked ref keyword for chest spawn points.[/*]
+[/list]
+
+Avoid using [b]0[/b] as a minimum actor count unless you truly want that group to spawn no actors. The spawn definition comments note that [b]0[/b] can force zero NPCs because of random number behavior.
+
+[size=3][b][u]Quick Test Pass[/u][/b][/size]
+
+Before building out a large POI, test a small setup:
+
+[list=1]
+[*]Place one manager.[/*]
+[*]Place one center marker and one map marker.[/*]
+[*]Place one Scene A boss marker, two Scene A minion markers, and one Scene A chest marker.[/*]
+[*]Link all markers to the manager with the correct Scene A keywords.[/*]
+[*]Configure one spawn group with low actor counts.[/*]
+[*]Enter, load, open, read, or otherwise trigger the manager based on the manager variant you selected.[/*]
+[/list]
+
+If no encounter starts, check the linked refs first. Most DSE setup failures come from markers not being linked to the manager with the exact keyword that the spawn group definition expects.

@@ -1,6 +1,6 @@
 # Venworks Dynamic Scenes Engine: Change Log
 
-## Unreleased
+## Version 1.0.0
 
 - Initial implementation based on the work for Venworks Encounters Overhaul, Venworks Expeditions (Unreleased Currently), and Quarter Onion Games Adventurers Inc (Also Never Released).
 - Modified Kreet (LC003) to have chest close trigger, activator trigger. slate read trigger, and cell load trigger as examples.

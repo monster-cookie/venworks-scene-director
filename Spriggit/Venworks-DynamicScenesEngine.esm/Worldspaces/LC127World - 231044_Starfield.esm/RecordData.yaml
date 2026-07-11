@@ -1,0 +1,40 @@
+FormKey: 231044:Starfield.esm
+MajorRecordFlagsRaw: 4
+EditorID: LC127World
+FormVersion: 582
+Version2: 15
+StarfieldMajorRecordFlags:
+- NotPlayable
+Components:
+- MutagenObjectType: WorldSpaceOverlayComponent
+  SNAM: 0xCB950100
+  PNAM: 0x03000000
+  SurfaceBlock: 231042:Starfield.esm
+Name:
+  TargetLanguage: English
+  Value: Crimson Fleet Outpost
+Location: 228C55:Starfield.esm
+Biome: 0A86DC:Starfield.esm
+Water: 000018:Starfield.esm
+LodWater: 000018:Starfield.esm
+LodWaterHeight: 0
+LandDefaults:
+  DefaultLandHeight: -2048
+  DefaultWaterHeight: -800
+MapData: {}
+WorldMapOffset:
+  WorldMapOffsetScale: 1
+DistantLodMultiplier: 1
+Flags:
+- SmallWorld
+FNAM: 0x00
+ObjectBoundsMin: -0.07324219, -0.07324219
+ObjectBoundsMax: 0.07324219, 0.07324219
+Music: 2C2EAC:Starfield.esm
+EnvironmentMap: Data\Textures\Cubemaps\Cell_TestVideoCube.dds
+GNAM: 1
+CellWaterHeightLocations: []
+WaterHeights: []
+HNAM: 0x05
+MajorFlags:
+- 0x4

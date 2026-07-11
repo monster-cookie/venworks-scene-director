@@ -77,8 +77,8 @@ VirtualMachineAdapter:
       Name: Waves
       Data: 1
 ObjectBounds:
-  First: -45, -45, -45
-  Second: 45, 45, 45
+  First: -10, -10, -10
+  Second: 10, 10, 10
 Model:
   LightLayer: 1
 MarkerColor: '#00CC4C33'
