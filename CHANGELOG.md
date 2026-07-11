@@ -1,5 +1,9 @@
 # Venworks Dynamic Scenes Engine: Change Log
 
+## Version 1.0.1
+
+- No changes, just a rebuild to switch to Nexus API deployments.
+
 ## Version 1.0.0
 
 - Initial implementation based on the work for Venworks Encounters Overhaul, Venworks Expeditions (Unreleased Currently), and Quarter Onion Games Adventurers Inc (Also Never Released).

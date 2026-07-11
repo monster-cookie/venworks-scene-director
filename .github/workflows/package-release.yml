@@ -21,10 +21,10 @@ permissions:
 #
 ###############################################################################
 env:
-  CREATION_DISPLAY_NAME: Venworks Dynamic Scenes Engine
+  CREATION_DISPLAY_NAME: Venworks - Dynamic Scenes Engine
   CREATION_FILE_NAME: Venworks-DynamicScenesEngine
   NEXUSMODS_CATEGORY: main
-  UPLOAD_TO_NEXUSMODS: false
+  UPLOAD_TO_NEXUSMODS: true
 
 jobs:
     validate-tag-source:

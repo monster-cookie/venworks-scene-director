@@ -1,6 +1,6 @@
 [size=4][u][b]Overview[/b][/u][/size]
 
-Venworks - Dynamic Scenes Engine (DSE) is a Starfield creator framework for building reusable dynamic scenes inside POIs, caves, ships, space encounters, and man-made clutter pack-ins.
+Dynamic Scenes Engine (DSE) is a Starfield creator framework for building reusable dynamic scenes inside POIs, caves, ships, space encounters, and man-made clutter pack-ins.
 
 The short version: DSE gives mod authors a marker-and-manager system for preparing a location once, then letting scripts or DSE managers decide what appears there. A DSE-ready space can be repopulated, dressed, renamed, used for a quest scene, or turned into a local encounter without hand-building every variant as a separate location.
 
@@ -63,6 +63,16 @@ The creator workflow is:
 [/list]
 
 Most setup problems come from marker links. If the manager fires but actors or chests do not appear, check that each marker is linked to the manager with the exact keyword used by the spawn group definition. Also remember each level (manager, faction selection, bosses/minions) has a randomization chance. Enabling debug mode will force all spawning to occur regardless of spawn chance.
+
+[size=2][b][u]Example POIs[/u][/b][/size]
+
+REMINDER: Enable DSE's debug mode so all spawn chances are set to 100%.
+
+[list]
+[*]Kreet Science Lab (LC003World): Has chest close trigger, activator trigger. slate read trigger, and cell load trigger[/*]
+[*]Bessel III Abandoned Research Post(LC127World): Has chest close trigger, cell load trigger, activator trigger. slate read triggers[/*]
+[/list]
+
 
 [size=4][b][u]Requirements[/u][/b][/size]
 [list]
