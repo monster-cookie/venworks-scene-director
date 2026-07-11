@@ -54,13 +54,13 @@ Struct SpawnGroupDefinition
   {Maximum number of NPCs to spawn}
 
   Keyword LinkRefKeywordForBossSpawnPoints=None
-  {The target, usually a marker or activator, that all spawn groups are linked to via reference keyword (See DSELinkedRef_Marker_Scene*_Minion keywords in the autofill group)}
+  {The target, usually a marker or activator, that all spawn groups are linked to via reference keyword (See DSE_LinkedRef_Marker_Scene*_Minion keywords in the autofill group)}
 
   Keyword LinkRefKeywordForMinionSpawnPoints=None
-  {The target, usually a marker or activator, that all spawn groups are linked to via reference keyword (See DSELinkedRef_Marker_Scene*_Boss keywords in the autofill group)}
+  {The target, usually a marker or activator, that all spawn groups are linked to via reference keyword (See DSE_LinkedRef_Marker_Scene*_Boss keywords in the autofill group)}
 
   Keyword LinkRefKeywordForChestSpawnPoints=None
-  {The target, usually a marker, that all chest markers are linked to via reference keyword (See DSELinkedRef_Marker_Scene*_Chest keywords in the autofill group)}
+  {The target, usually a marker, that all chest markers are linked to via reference keyword (See DSE_LinkedRef_Marker_Scene*_Chest keywords in the autofill group)}
 EndStruct
 
 ;; There should be DSE_SpawnerType global variables for these too
